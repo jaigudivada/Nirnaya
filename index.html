@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nirnaya - Decision Wheel</title>
+
+    <link rel="icon" type="image/png" href=".favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Premium Preloader -->
+
+    <div class="preloader" id="preloader">
+
+        <div class="preloader-title">Nirnaya</div>
+
+        <div class="progress-container">
+
+            <div class="progress-fill" id="progressFill"></div>
+
+        </div>
+
+        <div class="preloader-text">Loading decision wheel...</div>
+
+        <div class="preloader-percent" id="preloaderPercent">0%</div>
+
+    </div>
+
+
+
+    <!-- Premium Header -->
+
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+
+                <div class="logo-icon">🎯</div>
+
+                Nirnaya
+
+            </div>
+
+            <button class="theme-toggle" id="themeToggle">Light Mode</button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- Main Content -->
+
+    <main>
+
+        <div class="container">
+
+            <!-- Wheel Section -->
+
+            <div class="wheel-section">
+
+                <div class="wheel-container">
+
+                    <canvas id="wheelCanvas"></canvas>
+
+                    <div class="pointer"></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Controls Section -->
+
+            <div class="controls-section">
+
+                <h2 class="section-title">Decision Options</h2>
+
+                
+
+                <!-- Wheel Design Selector -->
+
+                <div class="design-selector">
+
+                    <h3 class="design-title">Wheel Design</h3>
+
+                    <div class="design-grid">
+
+                        <button class="design-btn active" data-design="classic">
+
+                            <span class="design-icon">⭕</span>
+
+                            <span>Classic</span>
+
+                        </button>
+
+                        <button class="design-btn" data-design="flower">
+
+                            <span class="design-icon">🌸</span>
+
+                            <span>Flower</span>
+
+                        </button>
+
+                        <button class="design-btn" data-design="fan">
+
+                            <span class="design-icon">🌀</span>
+
+                            <span>Fan</span>
+
+                        </button>
+
+                        <button class="design-btn" data-design="star">
+
+                            <span class="design-icon">⭐</span>
+
+                            <span>Star</span>
+
+                        </button>
+
+                        <button class="design-btn" data-design="galaxy">
+
+                            <span class="design-icon">🌌</span>
+
+                            <span>Galaxy</span>
+
+                        </button>
+
+                        <button class="design-btn" data-design="neon">
+
+                            <span class="design-icon">💜</span>
+
+                            <span>Neon</span>
+
+                        </button>
+
+                        <button class="design-btn" data-design="cyber">
+
+                            <span class="design-icon">🤖</span>
+
+                            <span>Cyber</span>
+
+                        </button>
+
+                        <button class="design-btn" data-design="rainbow">
+
+                            <span class="design-icon">🌈</span>
+
+                            <span>Rainbow</span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                
+
+                <div class="input-group">
+
+                    <input 
+
+                        type="text" 
+
+                        class="option-input" 
+
+                        id="optionInput" 
+
+                        placeholder="Enter an option..."
+
+                        maxlength="20"
+
+                    >
+
+                    <button class="btn btn-primary" id="addBtn">Add</button>
+
+                </div>
+
+
+
+                <div class="options-container" id="optionsContainer"></div>
+
+                
+
+                <div class="help-text" id="helpText">Add at least 2 options to spin the wheel</div>
+
+
+
+                <div class="action-buttons">
+
+                    <button class="btn btn-primary" id="spinBtn" disabled>Spin the Wheel</button>
+
+                    <button class="btn btn-secondary" id="clearBtn">Clear All</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- Result Modal -->
+
+    <div class="result-modal" id="resultModal">
+
+        <div class="modal-content">
+
+            <div class="result-label">You should choose:</div>
+
+            <div class="winner-text" id="winnerText"></div>
+
+            <div class="modal-buttons">
+
+                <button class="btn btn-primary" id="spinAgainBtn">Spin Again</button>
+
+                <button class="btn btn-secondary" id="editOptionsBtn">Edit Options</button>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</html>
