@@ -152,9 +152,25 @@
 
     function setupCanvas() {
 
-        const isMobile = window.innerWidth <= 768;
+        const width = window.innerWidth;
 
-        state.canvasSize = isMobile ? 360 : 480;
+        let canvasSize;
+
+        if (width <= 400) {
+
+            canvasSize = 300;
+
+        } else if (width <= 768) {
+
+            canvasSize = 360;
+
+        } else {
+
+            canvasSize = 480;
+
+        }
+
+        state.canvasSize = canvasSize;
 
         
 
@@ -3228,11 +3244,13 @@
 
         // Calculate exact rotation to center selected segment at pointer
 
+        // Pointer is at top (270° in canvas coordinate system where 0° = right/3 o'clock)
+
         const segmentCenterAngle = (selectedIndex * segmentAngle) + (segmentAngle / 2);
 
         const spins = 5; // Number of full rotations for dramatic effect
 
-        const targetRotation = (spins * 360) - segmentCenterAngle;
+        const targetRotation = (spins * 360) + 270 - segmentCenterAngle;
 
         
 
